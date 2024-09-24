@@ -1,4 +1,4 @@
-{% set version = '1.0.1' %}
+{% set version = "1.0.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rworkflows_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rworkflows/rworkflows_{{ version }}.tar.gz
-  sha256: 0cdfd9e4b89be8a2e054a8bedb879707a50c11e0fda2bfff5cc1cc42593346fb
+  sha256: 9ddfa1883faa217be4e7aa42dfd75a48765b88d8b9013d70d9633ecbf51082be
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -50,14 +50,8 @@ about:
   home: https://neurogenomics.github.io/rworkflows/
   dev_url: https://github.com/neurogenomics/rworkflows
   license: GPL-3.0-only
-  summary: Reproducibility is essential to the progress of research, yet achieving it remains
-    elusive even in computational fields. Continuous Integration (CI) platforms offer
-    a powerful way to launch automated workflows to check and document code, but often
-    require considerable time, effort, and technical expertise to setup. We therefore
-    developed the rworkflows suite to make robust CI workflows easy and freely accessible
-    to all R package developers. rworkflows consists of 1) a CRAN/Bioconductor-compatible
-    R package template, 2) an R package to quickly implement a standardised workflow,
-    and 3) a centrally maintained GitHub Action.
+  summary: Reproducibility is essential to the progress of research, yet achieving it remains elusive even in computational fields. Continuous Integration (CI) platforms offer a powerful way to launch automated workflows to check and document code, but often require considerable time, effort, and technical expertise to setup.
+    We therefore developed the rworkflows suite to make robust CI workflows easy and freely accessible to all R package developers. rworkflows consists of 1) a CRAN/Bioconductor-compatible R package template, 2) an R package to quickly implement a standardised workflow, and 3) a centrally maintained GitHub Action.
   license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
